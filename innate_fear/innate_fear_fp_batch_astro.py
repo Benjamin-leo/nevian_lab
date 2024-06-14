@@ -19,7 +19,7 @@ from data_import import import_ppd
 #ppd_files_dir = r'H:\fp_test\innate_fear\grabda'
 #ppd_files_dir = r'H:\fp_test\innate_fear\gcamp'
 #ppd_files_dir = r'H:\fp_test\innate_fear\grab5ht'
-ppd_files_dir = r'H:\fp_test\innate_fear\astro'
+ppd_files_dir = r'\\pc70\GroupNevian7\fp_test\innate_fear\astro'
 
 # Get a list of all PPD files in the directory
 ppd_files = [f for f in os.listdir(ppd_files_dir) if f.endswith('.ppd')]
@@ -112,9 +112,9 @@ trace_tmt_late_all = []
 for ppd_file in ppd_files:
     ppd_file_path = os.path.join(ppd_files_dir, ppd_file)
     
-    pre_start = 10
+    pre_start = 5
     #pre_start = 5
-    post_start = 16
+    post_start = 10
     
     # Extract the filename without the extension
     filename = os.path.splitext(os.path.basename(ppd_file_path))[0]
@@ -208,7 +208,7 @@ for ppd_file in ppd_files:
     plt.title('Mouse ' + mouse_number)
     plt.legend()
     # Save the figure as PNG with 300 dpi
-    save_path = os.path.join(ppd_files_dir, mouse_number + 'avg.png')
+    save_path = os.path.join(ppd_files_dir + '\\test_ben', mouse_number + 'avg.png')
     plt.savefig(save_path, dpi=300)
     plt.close()
     
@@ -241,7 +241,7 @@ for ppd_file in ppd_files:
     plt.title('Mouse ' + mouse_number)
     plt.legend()
     # Save the figure as PNG with 300 dpi
-    save_path = os.path.join(ppd_files_dir, mouse_number + 'trials.png')
+    save_path = os.path.join(ppd_files_dir + '\\test_ben', mouse_number + 'trials.png')
     plt.savefig(save_path, dpi=300)
     plt.close()
     
@@ -287,7 +287,7 @@ plt.ylabel('ΔF/F₀ (%)')
 plt.title('Astrocyte Calcium traces for Water / TMT puffs')
 plt.legend()
 # Save the figure as PNG with 300 dpi
-save_path = os.path.join(ppd_files_dir, 'tmt_water_overall.png')
+save_path = os.path.join(ppd_files_dir + '\\test_ben', 'tmt_water_overall.png')
 plt.savefig(save_path, dpi=300)
 plt.close() 
 
@@ -302,7 +302,7 @@ plt.ylabel('ΔF/F₀ (%)')
 plt.title('Early GRABda traces for Water / TMT puffs')
 plt.legend()
 # Save the figure as PNG with 300 dpi
-save_path = os.path.join(ppd_files_dir, 'tmt_water_early.png')
+save_path = os.path.join(ppd_files_dir + '\\test_ben', 'tmt_water_early.png')
 plt.savefig(save_path, dpi=300)
 plt.close() 
 
@@ -317,7 +317,7 @@ plt.ylabel('ΔF/F₀ (%)')
 plt.title('Intermediate GRABda traces for Water / TMT puffs')
 plt.legend()
 # Save the figure as PNG with 300 dpi
-save_path = os.path.join(ppd_files_dir, 'tmt_water_inter.png')
+save_path = os.path.join(ppd_files_dir + '\\test_ben', 'tmt_water_inter.png')
 plt.savefig(save_path, dpi=300)
 plt.close() 
 
@@ -332,7 +332,7 @@ plt.ylabel('ΔF/F₀ (%)')
 plt.title('Late GRABda traces for Water / TMT puffs')
 plt.legend()
 # Save the figure as PNG with 300 dpi
-save_path = os.path.join(ppd_files_dir, 'tmt_water_late.png')
+save_path = os.path.join(ppd_files_dir + '\\test_ben', 'tmt_water_late.png')
 plt.savefig(save_path, dpi=300)
 plt.close() 
 
