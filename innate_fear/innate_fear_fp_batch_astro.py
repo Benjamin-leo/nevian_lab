@@ -19,7 +19,7 @@ from data_import import import_ppd
 #ppd_files_dir = r'H:\fp_test\innate_fear\grabda'
 #ppd_files_dir = r'H:\fp_test\innate_fear\gcamp'
 #ppd_files_dir = r'H:\fp_test\innate_fear\grab5ht'
-ppd_files_dir = r'\\pc70\GroupNevian7\fp_test\innate_fear\astro'
+ppd_files_dir = r'\\pc70\GroupNevian7\fp_test\innate_fear\astro\astro15'
 
 # Get a list of all PPD files in the directory
 ppd_files = [f for f in os.listdir(ppd_files_dir) if f.endswith('.ppd')]
